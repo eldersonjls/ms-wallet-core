@@ -1,0 +1,50 @@
+
+POST http://localhost:8080/clients HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Elderson Jammer",
+    "email": "elderson@gmail.com",
+    "bank_id": "123",
+    "date_of_birth": "1978-01-29T00:00:00Z"
+}
+
+###
+POST http://localhost:8080/clients HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Eronete Santos",
+    "email": "eronete@gmail.com",
+    "bank_id": "124",
+    "date_of_birth": "1976-03-11T00:00:00Z"
+}
+
+###
+POST http://localhost:8080/accounts HTTP/1.1
+Content-Type: application/json
+
+{
+    "client_id": "cc34270e-21a6-4fd9-93e0-fdb18eb9b76f",
+    "account_type": "CURRENT"
+}
+
+###
+POST http://localhost:8080/accounts HTTP/1.1
+Content-Type: application/json
+
+{
+    "client_id": "0442cad2-8b71-4f55-a242-da5af08d758f",
+    "account_type": "CURRENT"
+}
+
+###
+POST http://localhost:8080/transactions HTTP/1.1
+Content-Type: application/json
+
+{
+    "transaction_type": "TRANSFER",
+    "account_id_from": "e672eaec-e7c2-4822-a1ed-e08814e3d3f0",
+    "account_id_to": "88384bcc-39ef-47bd-bf97-273ed62d8374",
+    "amount": 500
+}

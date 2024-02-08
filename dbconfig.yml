@@ -1,0 +1,4 @@
+development:
+  dialect: mysql
+  datasource: user:root@/wallet?parseTime=true
+  dir: migrations
